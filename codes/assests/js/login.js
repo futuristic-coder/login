@@ -1,7 +1,6 @@
-// login.js
-
-// Import Firebase config
-import './firebase.js';
+// Import Firebase functions
+import { auth } from './firebase.js'; // Ensure you import the `auth` object from your firebase.js file
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"; // Import the sign-in function
 
 // Get form elements
 const loginForm = document.getElementById('loginForm');
@@ -17,7 +16,7 @@ loginForm.addEventListener('submit', (event) => {
   const password = passwordInput.value;
 
   // Firebase authentication method to sign in the user
-  firebase.auth().signInWithEmailAndPassword(email, password)
+  signInWithEmailAndPassword(auth, email, password) // Use the imported function and auth object
     .then((userCredential) => {
       // On successful login, you get the user object
       const user = userCredential.user;

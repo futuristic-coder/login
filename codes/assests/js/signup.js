@@ -1,7 +1,6 @@
-// signup.js
-
-// Import Firebase config
-import './firebase.js';
+// Import Firebase functions
+import { auth } from './firebase.js'; // Ensure you import the `auth` object from your firebase.js file
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"; // Import the create user function
 
 // Get form elements
 const signupForm = document.getElementById('signupForm');
@@ -29,7 +28,7 @@ signupForm.addEventListener('submit', (event) => {
   }
 
   // Firebase authentication method to create a new user
-  firebase.auth().createUserWithEmailAndPassword(email, password)
+  createUserWithEmailAndPassword(auth, email, password) // Use the imported function and auth object
     .then((userCredential) => {
       const user = userCredential.user;
 
@@ -46,4 +45,3 @@ signupForm.addEventListener('submit', (event) => {
       alert(`Error: ${errorMessage}`);
     });
 });
-``
