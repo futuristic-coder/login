@@ -24,7 +24,7 @@ loginForm.addEventListener('submit', (event) => {
       console.log('User logged in:', user);
 
       // Redirect the user to the therapist dashboard
-      window.location.href = "/Fronted/views/therpist-index.html";
+      window.location.href = "/login/codes/view/index.html";
     })
     .catch((error) => {
       // Handle login errors
