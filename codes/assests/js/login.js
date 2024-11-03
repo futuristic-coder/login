@@ -23,7 +23,7 @@ loginForm.addEventListener('submit', (event) => {
       console.log('User logged in:', user);
 
       // Redirect the user to the therapist dashboard
-      window.location.href = "/login/Amazone-clone/index.html";
+      window.location.href = "/Web_tech/login/Amazone-clone/index.html";
     })
     .catch((error) => {
       // Handle login errors

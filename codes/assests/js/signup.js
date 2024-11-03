@@ -36,7 +36,7 @@ signupForm.addEventListener('submit', (event) => {
       console.log('User signed up:', user);
 
       // Redirect to the therapist dashboard
-      window.location.href = "/login/Amazone-clone/index.html";
+      window.location.href = "/Web_tech/login/Amazone-clone/index.html";
     })
     .catch((error) => {
       // Handle signup errors

@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+}
+.game{
+    height: 352px;
+    width: 352px;
+    border-radius: 6%;
+    border: 1px solid black;
+    margin:3rem ;
+    margin-top: 0%;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    background-size: cover;
+    width: 350px;;
+    height: 350px;
+    border-radius:20px;
+}
